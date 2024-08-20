@@ -33,4 +33,11 @@ public class StaticStack {
         this.vet[top] = null;
         return popped;
     }
+
+    public boolean clear(){
+        for(String value : this.vet){
+            value = null;
+        }
+        return true;
+    }
 }
