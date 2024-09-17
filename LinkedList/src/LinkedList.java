@@ -6,7 +6,7 @@ public class LinkedList {
     public LinkedList(){
 
     }
-    
+
     public <T> void add(T value){
         Node node = new Node(value);
         if(size > 0){
