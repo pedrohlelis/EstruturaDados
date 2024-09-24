@@ -9,7 +9,7 @@ public class FloodFill {
 		this.grid = new ImageMatrix(Image);
 	}
 
-    // Função para verificar se uma coordenada está dentro da imagem
+
     public static boolean coordenadaValida(int x, int y, int largura, int altura) {
         return x >= 0 && x < largura && y >= 0 && y < altura;
     }
@@ -25,7 +25,7 @@ public class FloodFill {
     	Pixel pixel = grid.findPixel(x, y);
     	
     	Color oldColor = pixel.color;
-//    	System.out.println("Cor do pixel selecionado: " + oldColor);
+
     	
     	if(oldColor.equals(newColor)) {
     		System.out.println("Cores iguais.");
@@ -57,13 +57,7 @@ public class FloodFill {
     			if((y - 1) >= 0) {
     				enqueueIfValid(x, y - 1, oldColor, PixelQueue);
     			}
-    			
-    			
-//                enqueueIfValid(x + 1, y, oldColor, PixelQueue);
-//                enqueueIfValid(x - 1, y, oldColor, PixelQueue);
-//                enqueueIfValid(x, y + 1, oldColor, PixelQueue);
-//                enqueueIfValid(x, y - 1, oldColor, PixelQueue);
-    			
+
         		System.out.println("New Matrix:");
         		grid.printMatrix();
         		PixelQueue.printQueue();
@@ -90,7 +84,7 @@ public class FloodFill {
                 pixelQueue.enqueue(neighborPixel);
             }
         } catch (Exception e) {
-            // Handle potential exceptions from findPixel
+
             System.out.println("Erro ao encontrar pixel nas coordenadas (" + x + "," + y + ")");
         }
     }
